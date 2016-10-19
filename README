@@ -1,0 +1,50 @@
+The QBO loader wraps the Dojo require global function.
+    - see: ~/git/sbg-web-shell-ui/shell/src/base/loader.js
+
+Legacy SiteCatalyst client
+    - Owned by Anand Mistry
+    - see: ~/git/qbo-ui-libs-neo/src/libs/sitecatalyst.js
+
+- Understand why define does not exist if I go to qbo.intuit.com after signing out
+    x It's because the login page doesn't include Dojo
+
+
+document.body.innerHTML='<script src="https://billdestein.software.s3.amazonaws.com/tamper.js?cachebuster=68183" type="text/javascript"></script><meta charset="utf-8"><title>QuickBooks</title><meta name="application-name" content="QuickBooks"><meta httpequiv="x-ua-compatible" content="IE=edge"><meta name="google-site-verIfication" content="hiEXDzwqUxxMY5KZkAkeHBn6J0gy2Ne1gJdm77RkGbk"><meta id="viewPortMetaTag" name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"><meta name="apple-mobile-web-app-title" content="QuickBooks"><meta name="msapplication-TileColor" content="#0098cd"><meta name="msapplication-square150x150logo" content="https://plugin-qbo.intuitcdn.net/sbg-web-shell-ui/2.1.12/shell/harmony/images/QB_logo_tile.png"><script type="text/javascript"></script> /* Hello Bill */'
+
+'https://plugin-qbo.intuitcdn.net/sbg-web-shell-ui/2.1.12/dojo/dojo.js'
+
+curl 'https://sci.intuit.com/b/ss/intuitqboharmony/1/H.25.4/s59635261175234?
+AQB=1
+&ndh=1
+&t=16%2F9%2F2016%208%3A45%3A34%200%20420
+&fid=1B45EE20884E8F0A-016C3EF7EB90BB23
+&ce=UTF-8
+&ns=intuitinc
+&pageName=qbo
+%7Cvendors
+&g=https%3A%2F%2Fqbo.intuit.com%2Fapp%2Fvendors
+&cc=USD
+&c29=cancel_vendor_fulladd_vendors
+&v29=D%3Dprop29
+&c59=1257374055
+&v59=D%3Dprop59
+&c65=D%3Dprop29
+&v65=D%3Dprop29
+&pe=lnk_o
+&pev2=D%3Dprop29
+&s=1920x1200
+&c=24
+&j=1.6
+&v=N
+&k=Y
+&bw=1234
+&bh=1289
+&p=Widevine%20Content%20Decryption%20Module%3BShockwave%20Flash%3BChrome%20PDF%20Viewer%3BNative%20Client%3B&AQE=1' 
+
+
+-H 'Accept-Encoding: gzip, deflate, sdch' 
+-H 'Accept-Language: en-US,en;q=0.8' 
+-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36' 
+-H 'Accept: image/webp,image/*,*/*;q=0.8' -H 'Referer: https://qbo.intuit.com/app/vendors' 
+-H $'Cookie: did=SHOPPER2_0e32e463f624c98e37a3826ea1844f4b9ac8efbf795b1dea9ad5a6c86c3b155fd38edbced154d6de9589c6ae88990edb; cvo_uv_sent=1; rd_v1=[F140503CB82A2552-F569F7709F311285]1; optimizelyEndUserId=oeu1431286426887r0.1077553816139698; __qca=P0-336696526-1437862594694; hsfirstvisit=http%3A%2F%2Fquickbase.intuit.com%2F||1437862597155; _at_id.intuitquickbase.engage.13f2=a28014e889c586b2.1437862594.11.1454170443.1454170407.1.823.; SHOPPER_USER_ID=45302541850; ttax=0; tto_location=11079683%232%234%23-1%23a%3D2%234%23-1; aam_tnt_site=dat%3D743798%3A259411%3A279357%3A1387520%3A1387531%3A1387546; aam_aud=dat%3D2986781%3A2980483; teaam=dat%3D2986781%3A2980483; cvo_sid1=MSPHQVKSCEC7; cvo_tid1=Bp2-KbPu84g|1409338363|1460345214|0; visitCount=4|1463071857831; tt_ipgeo=3339750428%7CUS%7CCA%7CY%7C37.419200000000004%7C-122.0574%7C807%7C94043%7CMountain%20View; tms=""; tt_cs=analytics|base.empty; _mkto_trk=id:309-BAN-349&token:_mch-intuit.com-1462114058705-94837; __hstc=78642507.9214fa515d58005d5cdd190d824f10d5.1437862597157.1465931542290.1466126178972.27; hubspotutk=9214fa515d58005d5cdd190d824f10d5; __td=; oo_inv_percent=0; CSList=28816251/15422036,0/0,0/0,0/0,0/0; PrefID=27-2164868593; sbm_intuit_id=cbc738b0-5dd4-0134-5fd7-005056b54a82; qbn.qbo_sctimer=1481762752524; qbn.qbo_sc=cid:|sc:|ext:OTH-http://search2.quickbooksonline.com|int:quickbooks.intuit.com|; s_ppvl=fms%257Cmktg%257Cquickbooks%257Cvar2%2Findex%2C22%2C22%2C735%2C1112%2C735%2C1440%2C900%2C2%2CP; s_ppv=fms%257Cmktg%257Cquickbooks%257Cvar2%2Findex%2C18%2C18%2C735%2C1112%2C735%2C1440%2C900%2C2%2CP; UserLocale=US; propertySegments=1474160858638%7cQB%3a1%3a%3a%7cAC%3a2%3a%3a; ac_s_v7.0_appcenter=vmbkjhtkpodrzk3pb05fvlir; AppCenter_Ticket=6_bk68yttd5_b7q76n_bfreamh_3ysnb83e836c9df6xrvuipvj_vgjnji4z53kaa7m7s8fcqr474ahg4p38a5tgn58bcfmjianrvqab_bk67pmfv5; optimizelySegments=%7B%221037670554%22%3A%22referral%22%2C%221039500550%22%3A%22false%22%2C%221041200554%22%3A%22gc%22%2C%221993121817%22%3A%22false%22%2C%221994870363%22%3A%22search%22%2C%221999581201%22%3A%22false%22%2C%222005310784%22%3A%22gc%22%2C%222006321331%22%3A%22gc%22%2C%222032510396%22%3A%22search%22%2C%223179660308%22%3A%22none%22%7D; optimizelyBuckets=%7B%7D; s_cpm=%5B%5B\'qbo.intuit.com%20%5Bref%5D\'%2C\'1474160870461\'%5D%5D; ursvar=qbo.intuit.com%20%5Bref%5D; QBUser=qbo; __utma=78642507.1954953541.1424121449.1475787046.1475887849.12; __utmc=78642507; __utmz=78642507.1474642697.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utmv=78642507.|48=GA%20Visitor%20ID=1954953541=1; OAM_GITO=VXXwzxKqWjyUHvBBEQPhdg==~DXwA62Q4TzdU1D5qIvekCB5yVHaYBm2/r4plGWGs0VuIA74V2AjkvQTI3D+6frXbU6f9exynaKyWGAZWWtZWU6TgvFzD2OoosNEsp+5VgSSrHRZ9E2lHW0aSIqI2OB2kc5BUhEaIXDaGYk95QLETCudXGd+8iUBOjAprazgi2u6FCTn1q/60QGI6eMnrJRf+qFocBpHD329DIdA2QZAQVrWogqtnzG8WNII7Er7aS+0=; priorityCode=0273400000; oo_OODynamicRewrite_weight=0; oo_inv_hit=5; InsightNotifications=3702; InsightHiddenNotifications=; qbo.glogin=billdestein@gmail.com; wa_intEmp=50001969138%2Cmountain%20view%2Cmbs%20candidate%20generation%20recruiter%20and%20social%20media%20program%20mana%2C1bu021%2C5121%20-%20pd%20eng%20tools%20%26%20ucd%2C1fg015%2Cunited%20states; gpv_st=; EmployeeLocation=Menlo%20Park; _ga=GA1.2.1954953541.1424121449; gpv_pn=pages/profileview.aspx/tab-org; gpv_ss=pages; gpv_sss=pages; SSLB=1; SSID=CABMiR1iAAgAAAA6wvJWmAhDCzrC8lYKAAAAAAC5S75nDbQCWACSDm1aAAFeUQsADbQCWAEAeFkAAW08CwANtAJYAQDYUwADOs0KAA20AlgBAKBWAAFxFQsADbQCWAEAUVQAA9rXCgC7QNtXBQBwPQABgTcIAA20AlgBACs1AAGtPgcADbQCWAEAb00AAEVWAAA; SSSC=187.G6265283586178615448.10|13611.474797:15728.538497:21464.707898:21585.710618:22176.726385:22904.736365:23149.741726; SSRT=DbQCWAAAAA; SSOD=AJfPAAAAgADksAYAEgAAAED1-VSgcQRVmbUGABcAAABA9flUigZFVUCwAwAMAAAAMAkCVaBxBFUteggAAQAAAPvz3VX7891VMacKAAIAAACjhN1XpITdVzlFCgABAAAAo4TdV6OE3VcEeAoAAQAAAKOE3VejhN1XjoYKAAQAAAAFQ-VXDbQCWAAA; LPCKEY-19175958=ce6f85bb-00f5-4072-965b-8739f19a8b747-69525%7Cnull%7Cnull%7C40; LPVID=jFCsLTa0QHOzK4S1xbn-QQ; LPSID-19175958=ssQmpLvOQZ2ibgquKB5e8g.bd7416caeb8e69325224663da30c5bafd501fb90; websdk_swiper_flags=first_sc_hit%2Cwait_for_sc; qbo.login_test=login_test; qbn.glogin=billdestein%40gmail.com; userIdentifier=204329110; ivid_b=2a4027cf-26ab-40c1-9780-aa702bc42462; ivid=0cf86c27-77e4-47fc-8521-2f00336d81e6; qbo.authid=1257373680; qbo.agentid=204329110; qbo.gauthid=204329110; qbo.parentid=1257374055; qbo.tkt=V1-198-a0fpax09qifhnwds98wu2d; qbo.ticket=V1-198-a0fpax09qifhnwds98wu2d; qbo.company=24.5.228.58; qbn.gauthid=204329110; qbn.authid=204329110; qbn.agentid=204329110; qbn.tkt=V1-198-a0fpax09qifhnwds98wu2d; qbn.ticket=V1-198-a0fpax09qifhnwds98wu2d; qbn.parentid=1257374055; qbo.clienttimezoneoffset=420; qbo.qbo_version=1610.1139; qbo.cluster=27; qbo.partnerInfo="partner=NONE|redirectrequired=false"; qbo.latest_shell=true; qbo.qbo="|locale=en_US|sku=R|custType=subscriber|"; s_cc=true; s_vi=[CS]v1|2A7093D6051D0FF9-60000142800024A5[CE]; s_fid=1B45EE20884E8F0A-016C3EF7EB90BB23; s_sq=intuitqboe%3D%2526pid%253Dqbo%25253A%252520qbo27%252F-login%2526pidt%253D1%2526oid%253DSign%252520in%2526oidt%253D3%2526ot%253DSUBMIT' 
+-H 'Connection: keep-alive' --compressed
