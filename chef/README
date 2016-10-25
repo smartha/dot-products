@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+
+- Git Repo
+    - https://github.intuit.com/wdestein/tidal-visualization/tree/master
+
+- Chef and Knife
+    - RVM
+        - rvm use ruby-2.3.1
+    - Install
+        - gem install chef
+        - gem install knife-solo
+    - Create a chef project
+        - knife solo init chef
+    - Bootstrap the remote server
+        - knife solo prepare ec2-user@dot-product-js
+        - This creates a json file for that server under chef/nodes
+    - Create a cookbook
+        - chef generate cookbook cookbooks/oracle
+    - Run
+        - knife solo cook ec2-user@bootstrap
+
+- EC2 Instance
+    - Type: t2.large (2 CPU, 4GB Ram, EBS, .042 * 24 * 30 = $37.44/month)
+    - AMI: RHEL
+    - Assign Public IP: enabled (Needed for outbound connections because we have no NAT box)
+    - Storage: Root 10GB
+    - Security Groups
+        - dot-products
+    - key pair
+         - dot-products
+    - curl -L https://www.opscode.com/chef/install.sh | bash
+
+- Knife
+    - rvm use ruby-2.3.1
+    - knife solo init chef
+    - knife solo prepare ec2-user@fireworks
+    - chef generate cookbook site-cookbooks/oracle
+    - knife solo cook ec2-user@dot-products-js --ssh-keepalive --ssh-keepalive-interval 10
+
