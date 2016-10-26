@@ -14,6 +14,13 @@ directory '/var/www/html' do
   action :create
 end
 
+template "/var/www/html/health-check.html" do
+  owner "root"
+  group "root"
+  mode "644"
+  source "health-check.html.erb"
+end
+
 template "/etc/httpd/conf/httpd.conf" do
   owner "root"
   group "root"

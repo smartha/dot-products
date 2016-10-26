@@ -1,0 +1,10 @@
+{
+  "run_list": [
+    "recipe[base]",
+    "recipe[tomcat]",
+    "recipe[memcached]"
+  ],
+  "automatic": {
+    "ipaddress": "dot-products"
+  }
+}

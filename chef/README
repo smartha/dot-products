@@ -20,7 +20,7 @@
         - knife solo cook ec2-user@bootstrap
 
 - EC2 Instance
-    - Type: t2.large (2 CPU, 4GB Ram, EBS, .042 * 24 * 30 = $37.44/month)
+    - Type: t2.medium (2 CPU, 4GB Ram, EBS, .042 * 24 * 30 = $37.44/month)
     - AMI: RHEL
     - Assign Public IP: enabled (Needed for outbound connections because we have no NAT box)
     - Storage: Root 10GB
@@ -36,4 +36,15 @@
     - knife solo prepare ec2-user@fireworks
     - chef generate cookbook site-cookbooks/oracle
     - knife solo cook ec2-user@dot-products-js --ssh-keepalive --ssh-keepalive-interval 10
+
+- Deploy javascript
+    - scp /Users/wdestein/git/dot-products/javascript/tamper.js dot-products-js:/var/www/html
+
+- Javascript
+    - https://www.sitegrapher.com/tamper.js
+
+- Web UI
+    - http://35.160.220.183:8080/manager/html
+    - username: dot-products
+    - password: dot-products
 

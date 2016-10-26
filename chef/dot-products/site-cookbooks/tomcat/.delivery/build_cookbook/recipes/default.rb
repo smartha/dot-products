@@ -1,8 +1,6 @@
 #
-# Cookbook Name:: base
+# Cookbook Name:: build_cookbook
 # Recipe:: default
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
-
-package 'xterm'
-package 'telnet'
+include_recipe 'delivery-truck::default'
